@@ -1,0 +1,23 @@
+{
+  "creationDate": "1967-02-23",
+  "complaint": {
+    "complaintType": "SUBMITTING_APPLICATION",
+    "reference": {
+      "referenceType": "IHS_REF",
+      "reference": "ea dolore consequat ex dolor"
+    },
+    "reporterDetails": {
+      "applicantType": "APPLICANT",
+      "applicantName": "reprehenderit aliqua ea",
+      "applicantNationality": "Congo",
+      "applicantDob": "1967-04-14",
+      "applicantEmail": "64E@fmZgjGfpG.cfb",
+      "applicantPhone": "cupidatat"
+    },
+    "complaintDetails": {
+      "complaintText": "ut qui eiusmod",
+      "problemExperienced": "SOMETHING_ELSE",
+      "applicationLocation": "OUTSIDE_UK"
+    }
+  }
+}

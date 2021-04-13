@@ -16,7 +16,7 @@ public class SQSClient {
 
     @Autowired
     public SQSClient(AmazonSQS sqs, 
-                     @Value("${case.creator.ukvi-complaint.queue-name}")  String queueName) {
+                     @Value("${run.config.queue-name}")  String queueName) {
         this.sqs = sqs;
         this.queueUrl = sqs.getQueueUrl(queueName).getQueueUrl();
     }

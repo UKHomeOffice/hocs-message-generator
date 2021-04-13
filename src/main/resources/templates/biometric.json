@@ -1,0 +1,22 @@
+{
+  "creationDate": "1988-05-26",
+  "complaint": {
+    "complaintType": "BIOMETRIC_RESIDENCE_PERMIT",
+    "reference": {
+      "referenceType": "GWF_REF",
+      "reference": "occaecat"
+    },
+    "reporterDetails": {
+      "applicantType": "APPLICANT",
+      "applicantName": "sit culpa",
+      "applicantNationality": "Denmark",
+      "applicantDob": "2020-10-03",
+      "applicantEmail": "sss@uevptde.com",
+      "applicantPhone": "01772 700806"
+    },
+    "complaintDetails": {
+      "complaintText": "qui",
+      "problemExperienced": "CARD_INCORRECT"
+    }
+  }
+}

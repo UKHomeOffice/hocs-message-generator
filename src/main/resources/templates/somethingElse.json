@@ -1,0 +1,21 @@
+{
+  "creationDate": "1966-02-09",
+  "complaint": {
+    "complaintType": "SOMETHING_ELSE",
+    "reference": {
+      "referenceType": "HO_REF",
+      "reference": "occaecat"
+    },
+    "reporterDetails": {
+      "applicantType": "APPLICANT",
+      "applicantName": "est amet irure veniam aute",
+      "applicantNationality": "Uruguay",
+      "applicantDob": "2020-01-24",
+      "applicantEmail": "labore pariatur",
+      "applicantPhone": "sed ullamco ut in"
+    },
+    "complaintDetails": {
+      "complaintText": "pariatur mollit cillum cupidatat officia"
+    }
+  }
+}

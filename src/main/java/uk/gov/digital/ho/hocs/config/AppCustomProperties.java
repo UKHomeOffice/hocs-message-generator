@@ -8,17 +8,14 @@ import org.springframework.context.annotation.Configuration;
 import javax.validation.constraints.NotBlank;
 
 @Configuration
-@ConfigurationProperties(prefix = "case.creator")
+@ConfigurationProperties(prefix = "run.config")
 @Getter
 @Setter
 public class AppCustomProperties {
     @NotBlank
-    private ClientCustomProperties ukviComplaint;
+    private String queueName;
+    @NotBlank
+    private Integer numMessages;
 
-    @Getter
-    @Setter
-    private static class ClientCustomProperties {
-        @NotBlank
-        private String queueName;
-    }
+    private String complaintType;
 }
