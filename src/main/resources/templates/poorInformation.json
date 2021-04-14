@@ -1,21 +1,21 @@
 {
-  "creationDate": "2020-10-03",
+  "creationDate": "@@TODAY@@",
   "complaint": {
     "complaintType": "POOR_INFORMATION",
     "reference": {
       "referenceType": "UAN_REF",
-      "reference": "in ut id veniam"
+      "reference": "@@REFERENCE@@"
     },
     "reporterDetails": {
       "applicantType": "APPLICANT",
-      "applicantName": "occaecat Lorem",
-      "applicantNationality": "Czech Republic",
-      "applicantDob": "2020-10-03",
-      "applicantEmail": "sss@uevptde.com",
-      "applicantPhone": "01772 700806"
+      "applicantName": "@@APPLICANT_NAME@@",
+      "applicantNationality": "@@NATIONALITY@@",
+      "applicantDob": "@@DOB@@",
+      "applicantEmail": "@@APPLICANT_EMAIL@@",
+      "applicantPhone": "@@PHONE@@"
     },
     "complaintDetails": {
-      "complaintText": "do tempor"
+      "complaintText": "@@COMPLAINT_TEXT@@"
     }
   }
 }

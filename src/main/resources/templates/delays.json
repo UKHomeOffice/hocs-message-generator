@@ -1,21 +1,21 @@
 {
-  "creationDate": "1995-05-15",
+  "creationDate": "@@TODAY@@",
   "complaint": {
     "complaintType": "DELAYS",
     "reference": {
       "referenceType": "HO_REF",
-      "reference": "amet"
+      "reference": "@@REFERENCE@@"
     },
     "reporterDetails": {
       "applicantType": "APPLICANT",
-      "applicantName": "esse minim",
-      "applicantNationality": "Cook Islands",
-      "applicantDob": "1980-11-04",
-      "applicantEmail": "9A50@llmsqJD.ua",
-      "applicantPhone": "aliqua ea"
+      "applicantName": "@@APPLICANT_NAME@@",
+      "applicantNationality": "@@NATIONALITY@@",
+      "applicantDob": "@@DOB@@",
+      "applicantEmail": "@@APPLICANT_EMAIL@@",
+      "applicantPhone": "@@PHONE@@"
     },
     "complaintDetails": {
-      "complaintText": "pariatur Excepteur laborum dolore",
+      "complaintText": "@@COMPLAINT_TEXT@@",
       "delayedWaitingFor": "APPLICATION_DELAY",
       "applicationSubmittedWhen": "Lorem",
       "applicationLocation": "INSIDE_UK"

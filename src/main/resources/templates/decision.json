@@ -1,21 +1,21 @@
 {
-  "creationDate": "1952-03-16",
+  "creationDate": "@@TODAY@@",
   "complaint": {
     "complaintType": "IMMIGRATION_DECISION",
     "reference": {
       "referenceType": "IHS_REF",
-      "reference": "12345"
+      "reference": "@@REFERENCE@@"
     },
     "reporterDetails": {
       "applicantType": "APPLICANT",
-      "applicantName": "voluptate labore",
-      "applicantNationality": "Armenia",
-      "applicantDob": "1979-12-29",
-      "applicantEmail": "9A50@llmsqJD.ua",
-      "applicantPhone": "aliqua ea"
+      "applicantName": "@@APPLICANT_NAME@@",
+      "applicantNationality": "@@NATIONALITY@@",
+      "applicantDob": "@@DOB@@",
+      "applicantEmail": "@@APPLICANT_EMAIL@@",
+      "applicantPhone": "@@PHONE@@"
     },
     "complaintDetails": {
-      "complaintText": "Ut velit ut magna aliquip",
+      "complaintText": "@@COMPLAINT_TEXT@@",
       "decisionOutcome": "POSITIVE",
       "applicationLocation": "INSIDE_UK"
     }

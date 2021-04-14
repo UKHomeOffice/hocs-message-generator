@@ -1,9 +1,9 @@
 {
-  "creationDate": "1948-08-23",
+  "creationDate": "@@TODAY@@",
   "complaint": {
     "complaintType": "EXISTING",
     "complaintDetails": {
-      "complaintText": "occaecat proident labore dolor sunt",
+      "complaintText": "@@COMPLAINT_TEXT@@",
       "previousComplaint": {
         "previousComplaintType": "IMMIGRATION_DECISION"
       }

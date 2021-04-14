@@ -1,21 +1,21 @@
 {
-  "creationDate": "1966-02-09",
+  "creationDate": "@@TODAY@@",
   "complaint": {
     "complaintType": "SOMETHING_ELSE",
     "reference": {
       "referenceType": "HO_REF",
-      "reference": "occaecat"
+      "reference": "@@REFERENCE@@"
     },
     "reporterDetails": {
       "applicantType": "APPLICANT",
-      "applicantName": "est amet irure veniam aute",
-      "applicantNationality": "Uruguay",
-      "applicantDob": "2020-01-24",
-      "applicantEmail": "labore pariatur",
-      "applicantPhone": "sed ullamco ut in"
+      "applicantName": "@@APPLICANT_NAME@@",
+      "applicantNationality": "@@NATIONALITY@@",
+      "applicantDob": "@@DOB@@",
+      "applicantEmail": "@@APPLICANT_EMAIL@@",
+      "applicantPhone": "@@PHONE@@"
     },
     "complaintDetails": {
-      "complaintText": "pariatur mollit cillum cupidatat officia"
+      "complaintText": "@@COMPLAINT_TEXT@@"
     }
   }
 }

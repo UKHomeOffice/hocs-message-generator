@@ -1,21 +1,21 @@
 {
-  "creationDate": "1949-04-07",
+  "creationDate": "@@TODAY@@",
   "complaint": {
     "complaintType": "MAKING_APPOINTMENT",
     "reference": {
       "referenceType": "GWF_REF",
-      "reference": "nostrud labore do"
+      "reference": "@@REFERENCE@@"
     },
     "reporterDetails": {
       "applicantType": "APPLICANT",
-      "applicantName": "dolore",
-      "applicantNationality": "Botswana",
-      "applicantDob": "1974-03-05",
-      "applicantEmail": "sss@uevptde.com",
-      "applicantPhone": "01772 700806"
+      "applicantName": "@@APPLICANT_NAME@@",
+      "applicantNationality": "@@NATIONALITY@@",
+      "applicantDob": "@@DOB@@",
+      "applicantEmail": "@@APPLICANT_EMAIL@@",
+      "applicantPhone": "@@PHONE@@"
     },
     "complaintDetails": {
-      "complaintText": "tempor aute pariatur aliquip esse",
+      "complaintText": "@@COMPLAINT_TEXT@@",
       "problemExperienced": "TECHNICAL_APPOINTMENTS",
       "applicationLocation": "INSIDE_UK"
     }

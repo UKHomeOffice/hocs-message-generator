@@ -4,15 +4,15 @@
     "complaintType": "BIOMETRIC_RESIDENCE_PERMIT",
     "reference": {
       "referenceType": "GWF_REF",
-      "reference": "@@REFERENCE@@"
+      "reference": "@@MISSED_TOKEN@@"
     },
     "reporterDetails": {
       "applicantType": "APPLICANT",
       "applicantName": "@@APPLICANT_NAME@@",
-      "applicantNationality": "@@NATIONALITY@@",
-      "applicantDob": "@@DOB@@",
-      "applicantEmail": "@@APPLICANT_EMAIL@@",
-      "applicantPhone": "@@PHONE@@"
+      "applicantNationality": "Denmark",
+      "applicantDob": "2020-10-03",
+      "applicantEmail": "sss@uevptde.com",
+      "applicantPhone": "01772 700806"
     },
     "complaintDetails": {
       "complaintText": "@@COMPLAINT_TEXT@@",

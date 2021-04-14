@@ -1,21 +1,21 @@
 {
-  "creationDate": "1967-02-23",
+  "creationDate": "@@TODAY@@",
   "complaint": {
     "complaintType": "SUBMITTING_APPLICATION",
     "reference": {
       "referenceType": "IHS_REF",
-      "reference": "ea dolore consequat ex dolor"
+      "reference": "@@REFERENCE@@"
     },
     "reporterDetails": {
       "applicantType": "APPLICANT",
-      "applicantName": "reprehenderit aliqua ea",
-      "applicantNationality": "Congo",
-      "applicantDob": "1967-04-14",
-      "applicantEmail": "64E@fmZgjGfpG.cfb",
-      "applicantPhone": "cupidatat"
+      "applicantName": "@@APPLICANT_NAME@@",
+      "applicantNationality": "@@NATIONALITY@@",
+      "applicantDob": "@@DOB@@",
+      "applicantEmail": "@@APPLICANT_EMAIL@@",
+      "applicantPhone": "@@PHONE@@"
     },
     "complaintDetails": {
-      "complaintText": "ut qui eiusmod",
+      "complaintText": "@@COMPLAINT_TEXT@@",
       "problemExperienced": "SOMETHING_ELSE",
       "applicationLocation": "OUTSIDE_UK"
     }

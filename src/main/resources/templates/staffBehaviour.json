@@ -1,26 +1,26 @@
 {
-  "creationDate": "2020-10-03",
+  "creationDate": "@@TODAY@@",
   "complaint": {
     "complaintType": "POOR_STAFF_BEHAVIOUR",
     "reference": {
       "referenceType": "IHS_REF",
-      "reference": "amet"
+      "reference": "@@REFERENCE@@"
     },
     "reporterDetails": {
       "applicantType": "AGENT",
       "applicantDetails": {
-        "applicantName": "sint enim incididunt in",
-        "applicantNationality": "Lorem",
-        "applicantDob": "1989-08-23"
+        "applicantName": "@@APPLICANT_NAME@@",
+        "applicantNationality": "@@NATIONALITY@@",
+        "applicantDob": "@@DOB@@"
       },
       "agentDetails": {
-        "agentName": "id",
+        "agentName": "@@AGENT_NAME@@",
         "agentType": "RELATIVE",
-        "agentEmail": "cupidatat in"
+        "agentEmail": "@@AGENT_EMAIL@@"
       }
     },
     "complaintDetails": {
-      "complaintText": "officia laborum dolore",
+      "complaintText": "@@COMPLAINT_TEXT@@",
       "experience": {
         "experienceType": "FACE_TO_FACE",
         "location": {
