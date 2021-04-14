@@ -27,7 +27,10 @@ public class TokenReplacer {
             case "@@AGENT_NAME@@":
                 return faker.name().fullName();
             case "@@NATIONALITY@@":
+            case "@@COUNTRY@@":
                 return faker.country().name();
+            case "@@CITY@@":
+                return faker.address().city();
             case "@@DOB@@":
                 return convertToLocalDate(faker.date().birthday()).format(DateTimeFormatter.ISO_DATE);
             case "@@APPLICANT_EMAIL@@":

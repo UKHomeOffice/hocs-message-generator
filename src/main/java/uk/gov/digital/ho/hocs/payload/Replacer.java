@@ -11,6 +11,8 @@ public class Replacer {
             "@@APPLICANT_NAME@@",
             "@@AGENT_NAME@@",
             "@@NATIONALITY@@",
+            "@@COUNTRY@@",
+            "@@CITY@@",
             "@@DOB@@",
             "@@APPLICANT_EMAIL@@",
             "@@AGENT_EMAIL@@",
