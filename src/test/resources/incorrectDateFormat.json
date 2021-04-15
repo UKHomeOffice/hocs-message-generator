@@ -11,8 +11,8 @@
       "applicantName": "@@APPLICANT_NAME@@",
       "applicantNationality": "Denmark",
       "applicantDob": "2020-10-03",
-      "applicantEmail": "sss@uevptde.com",
-      "applicantPhone": "01772 700806"
+      "applicantEmail": "dorthea.weissnat@example.com",
+      "applicantPhone": "0114 4960999"
     },
     "complaintDetails": {
       "complaintText": "@@COMPLAINT_TEXT@@",

@@ -35,9 +35,9 @@ public class TokenReplacer {
                 return convertToLocalDate(faker.date().birthday()).format(DateTimeFormatter.ISO_DATE);
             case "@@APPLICANT_EMAIL@@":
             case "@@AGENT_EMAIL@@":
-                return faker.internet().emailAddress();
+                return faker.internet().safeEmailAddress();
             case "@@PHONE@@":
-                return faker.phoneNumber().phoneNumber();
+                return "0114 4960999";
             case "@@REFERENCE@@":
                 return fakeValuesService.regexify("[a-z1-9]{10}");
             default:
