@@ -76,6 +76,7 @@ steps:
     image: plugins/git
     commands:
       - git clone https://github.com/UKHomeOffice/kube-hocs-message-generator.git
+      - git checkout feature/HOCS-2659-message-generator
     when:
       event:
         - promote
