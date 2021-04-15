@@ -17,7 +17,8 @@ import org.springframework.context.annotation.Profile;
 @Profile({"local"})
 public class LocalStackConfiguration {
 
-    public static final String REGION = "eu-west-2";
+    @Value("${aws.sqs.region}")
+    private String region;
     @Value("${aws.local-host}")
     private String awsHost;
 
@@ -37,7 +38,7 @@ public class LocalStackConfiguration {
     @Bean
     public AmazonSQS sqsClient() {
         String host = String.format("http://%s:4576/", awsHost);
-        AwsClientBuilder.EndpointConfiguration endpoint = new AwsClientBuilder.EndpointConfiguration(host, REGION);
+        AwsClientBuilder.EndpointConfiguration endpoint = new AwsClientBuilder.EndpointConfiguration(host, region);
         return AmazonSQSClientBuilder.standard()
                 .withClientConfiguration(new ClientConfiguration().withProtocol(Protocol.HTTP))
                 .withCredentials(awsCredentialsProvider)
