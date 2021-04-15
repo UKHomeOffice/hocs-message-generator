@@ -137,7 +137,6 @@ steps:
       ENVIRONMENT: ${DRONE_DEPLOY_TO}
       KUBE_TOKEN:
         from_secret: hocs_message_generator_${DRONE_DEPLOY_TO/-/_}
-      KUBE_SERVER: https://kube-api-notprod.notprod.acp.homeoffice.gov.uk
     when:
       event:
         - promote
