@@ -23,8 +23,6 @@ ADD scripts /app/scripts
 
 RUN chmod a+x /app/scripts/*
 
-EXPOSE 8080
-
 USER ${USER_ID}
 
 CMD /app/scripts/run.sh

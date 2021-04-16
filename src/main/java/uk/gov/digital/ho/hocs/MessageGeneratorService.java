@@ -38,13 +38,13 @@ public class MessageGeneratorService  {
         if (!StringUtils.isEmpty(complaintType)) {
             for (int i = 0; i < numMessages; i++) {
                 String fileName = PayloadFile.valueOf(complaintType).getFileName();
-                log.info("Sending : {}", fileName);
+                log.info("Sending {} : {}", complaintType, fileName);
                 sqsClient.sendMessage(replaceEach(getResourceFileAsString(fileName), replacer.getSearchList(), replacer.getReplaceList()));
             }
         } else {
             new Random().ints(numMessages, 1, PayloadFile.values().length).forEach((typeIndex) -> {
                 String fileName = PayloadFile.values()[typeIndex].getFileName();
-                log.info("Sending : {}", fileName);
+                log.info("Sending Random : {}", fileName);
                 sqsClient.sendMessage(replaceEach(getResourceFileAsString(fileName), replacer.getSearchList(), replacer.getReplaceList()));
             });
         }
