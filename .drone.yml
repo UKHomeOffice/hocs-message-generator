@@ -75,9 +75,7 @@ steps:
   - name: clone kube repo
     image: plugins/git
     commands:
-      - git clone https://github.com/UKHomeOffice/kube-hocs-message-generator.git
-      - cd kube-hocs-message-generator
-      - git checkout feature/HOCS-2659-message-generator
+      - git clone --branch main https://github.com/UKHomeOffice/kube-hocs-message-generator.git
     when:
       event:
         - promote
