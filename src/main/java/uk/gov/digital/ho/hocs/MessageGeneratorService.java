@@ -41,12 +41,14 @@ public class MessageGeneratorService  {
                 log.info("Sending {} : {}", complaintType, fileName);
                 sqsClient.sendMessage(replaceEach(getResourceFileAsString(fileName), replacer.getSearchList(), replacer.getReplaceList()));
             }
+            log.info("Successfully sent {}, {} messages.", numMessages, complaintType);
         } else {
             new Random().ints(numMessages, 1, PayloadFile.values().length).forEach((typeIndex) -> {
                 String fileName = PayloadFile.values()[typeIndex].getFileName();
                 log.info("Sending Random : {}", fileName);
                 sqsClient.sendMessage(replaceEach(getResourceFileAsString(fileName), replacer.getSearchList(), replacer.getReplaceList()));
             });
+            log.info("Successfully sent {}, random messages.", numMessages);
         }
     }
 }
