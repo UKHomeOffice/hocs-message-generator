@@ -1,0 +1,118 @@
+---
+
+kind: pipeline
+type: kubernetes
+name: build
+
+steps:
+  - name: build project
+    image: quay.io/ukhomeofficedigital/openjdk11:v11.0.5_10
+    commands:
+      - ./gradlew assemble --no-daemon
+    environment:
+      ARTIFACTORY_TOKEN:
+        from_secret: ARTIFACTORY_TOKEN
+      ARTIFACTORY_USER:
+        from_secret: ARTIFACTORY_USER
+
+  - name: test project
+    image: quay.io/ukhomeofficedigital/openjdk11:v11.0.5_10
+    commands:
+      - ./gradlew check --no-daemon
+    environment:
+      ARTIFACTORY_TOKEN:
+        from_secret: ARTIFACTORY_TOKEN
+      ARTIFACTORY_USER:
+        from_secret: ARTIFACTORY_USER
+    depends_on:
+      - build project
+
+  - name: sonar scanner
+    image: quay.io/ukhomeofficedigital/sonar-scanner:v3.0.3
+    depends_on:
+      - build project
+
+  - name: build & push
+    image: plugins/docker
+    settings:
+      registry: quay.io
+      repo: quay.io/ukhomeofficedigital/hocs-message-generator
+      tags:
+        - build_${DRONE_BUILD_NUMBER}
+        - ${DRONE_COMMIT_SHA}
+        - branch-${DRONE_COMMIT_BRANCH/\//_}
+    environment:
+      DOCKER_PASSWORD:
+        from_secret: QUAY_ROBOT_TOKEN
+      ARTIFACTORY_TOKEN:
+        from_secret: ARTIFACTORY_TOKEN
+      ARTIFACTORY_USER:
+        from_secret: ARTIFACTORY_USER
+      DOCKER_USERNAME: ukhomeofficedigital+hocs_quay_robot
+    depends_on:
+      - test project
+
+  - name: build & push latest
+    image: plugins/docker
+    settings:
+      registry: quay.io
+      repo: quay.io/ukhomeofficedigital/hocs-message-generator
+      tags:
+        - latest
+    environment:
+      DOCKER_PASSWORD:
+        from_secret: QUAY_ROBOT_TOKEN
+      DOCKER_USERNAME: ukhomeofficedigital+hocs_quay_robot
+      ARTIFACTORY_TOKEN:
+        from_secret: ARTIFACTORY_TOKEN
+      ARTIFACTORY_USER:
+        from_secret: ARTIFACTORY_USER
+    when:
+      branch:
+        - main
+    depends_on:
+      - test project
+
+trigger:
+  event:
+    - push
+
+---
+kind: pipeline
+type: kubernetes
+name: deploy
+depends_on:
+  - build
+trigger:
+  event:
+    exclude:
+      - pull_request
+      - tag
+
+steps:
+  - name: clone kube repo
+    image: plugins/git
+    commands:
+      - git clone --branch main https://github.com/UKHomeOffice/kube-hocs-message-generator.git
+    when:
+      event:
+        - promote
+
+  - name: deploy to not prod
+    image: quay.io/ukhomeofficedigital/kd:v1.16.0
+    commands:
+      - cd kube-hocs-message-generator
+      - ./deploy.sh
+    environment:
+      ENVIRONMENT: ${DRONE_DEPLOY_TO}
+      KUBE_TOKEN:
+        from_secret: hocs_message_generator_${DRONE_DEPLOY_TO/-/_}
+    when:
+      event:
+        - promote
+      target:
+        exclude:
+          - release
+          - "*-prod"
+    depends_on:
+      - clone kube repo
