@@ -34,7 +34,7 @@ dependencies {
     implementation group: 'com.amazonaws', name: 'aws-java-sdk', version: '1.12.137'
     implementation('net.logstash.logback:logstash-logback-encoder:5.3')
     implementation 'com.github.javafaker:javafaker:1.0.2'
-    implementation 'com.jayway.jsonpath:json-path:2.5.0'
+    implementation 'com.jayway.jsonpath:json-path:2.6.0'
     implementation 'javax.xml.bind:jaxb-api:2.3.0'
     implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
     implementation group: 'org.apache.commons', name: 'commons-text', version: '1.9'
