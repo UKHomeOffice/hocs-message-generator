@@ -32,7 +32,7 @@ dependencies {
     implementation('org.springframework.boot:spring-boot-starter')
     implementation('org.springframework.boot:spring-boot-starter-validation')
     implementation group: 'com.amazonaws', name: 'aws-java-sdk', version: '1.12.137'
-    implementation('net.logstash.logback:logstash-logback-encoder:5.3')
+    implementation('net.logstash.logback:logstash-logback-encoder:7.0.1')
     implementation 'com.github.javafaker:javafaker:1.0.2'
     implementation 'com.jayway.jsonpath:json-path:2.6.0'
     implementation 'javax.xml.bind:jaxb-api:2.3.0'
